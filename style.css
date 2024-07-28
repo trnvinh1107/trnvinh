@@ -152,6 +152,27 @@ html {
   line-height: 18px;
   font-size: 1.1rem;
 }
+fa-check:before { 
+  display: inline-block;
+  line-height: 1; /* Line-height mặc định cho tất cả các trình duyệt */
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+}
+/* CSS cho Safari */
+@supports (-webkit-appearance: none) and (stroke-color: transparent) {
+  .fa-check:before {
+    margin-top: -9px; /* Chỉ áp dụng cho Safari */
+  }
+  .toggle__back a i {
+    margin-top: 9px;
+  }
+}
+.fa-google {
+  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
 .card__title--description {
   position: relative;
   display: flex;
