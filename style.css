@@ -152,7 +152,8 @@ html {
   line-height: 18px;
   font-size: 1.1rem;
 }
-fa-check::before { 
+
+.fa-check:before { 
   display: inline-block;
   line-height: 1;
   vertical-align: middle;
@@ -324,7 +325,6 @@ fa-check::before {
 .toggle__theme {
   right: 20px;
 }
-
 .app.dark .toggle {
   color: var(--bg-main);
   border: 2px solid var(--bg-dark);
