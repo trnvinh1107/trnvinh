@@ -152,15 +152,15 @@ html {
   line-height: 18px;
   font-size: 1.1rem;
 }
-fa-check:before { 
+fa-check::before { 
   display: inline-block;
-  line-height: 1; /* Line-height mặc định cho tất cả các trình duyệt */
-  vertical-align: middle; /* Căn giữa theo chiều dọc */
+  line-height: 1;
+  vertical-align: middle;
 }
 /* CSS cho Safari */
 @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-  .fa-check:before {
-    margin-top: -9px; /* Chỉ áp dụng cho Safari */
+  .fa-check::before {
+    margin-top: -9px;
   }
   .toggle__back a i {
     margin-top: 9px;
