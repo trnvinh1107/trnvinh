@@ -155,17 +155,8 @@ html {
 
 .fa-check:before { 
   display: inline-block;
-  line-height: 1;
-  vertical-align: middle;
-}
-/* CSS cho Safari */
-@supports (-webkit-appearance: none) and (stroke-color: transparent) {
-  .fa-check::before {
-    margin-top: -9px;
-  }
-  .toggle__back a i {
-    margin-top: 9px;
-  }
+  line-height: 1; /* Line-height mặc định cho tất cả các trình duyệt */
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
 }
 .fa-google {
   background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
@@ -174,6 +165,13 @@ html {
   color: transparent;
   -webkit-text-fill-color: transparent;
 }
+/* CSS cho Safari */
+@supports (-webkit-appearance: none) and (stroke-color: transparent) {
+  .fa-check::before {
+    margin-top: -9px; /* Chỉ áp dụng cho Safari */
+  } 
+}
+
 .card__title--description {
   position: relative;
   display: flex;
@@ -329,28 +327,21 @@ html {
   color: var(--bg-main);
   border: 2px solid var(--bg-dark);
 }
-.toggle__theme:hover,
-.toggle__back:hover {
+.toggle__theme:hover {
   box-shadow: var(--outer-shadow-o);
 }
 
-.app.dark .toggle__theme,
-.app.dark .toggle__back {
+.app.dark .toggle__theme {
   box-shadow: var(--outer-shadow-dark);
 }
 
-.app.dark .toggle__theme:hover,
-.app.dark .toggle__back:hover {
+.app.dark .toggle__theme:hover {
   box-shadow: var(--outer-shadow-dark-o);
 }
 
-.toggle__theme .fas,
-.toggle__back .fas {
+.toggle__theme .fas  {
   font-size: 2rem;
-}
-.toggle__back {
-  left: 20px;
-}
+} 
 
 .button__list {
   position: relative;
